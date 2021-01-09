@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">weather3</string>
+    <string name="content_description">Image</string>
+    <string name="empty_city_field">Город не указан</string>
+</resources>
