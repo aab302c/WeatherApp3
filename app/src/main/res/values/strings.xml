@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">weather3</string>
+    <string name="app_name">Weather</string>
     <string name="content_description">Image</string>
-    <string name="empty_city_field">Город не указан</string>
+    <string name="empty_city_field">Location is not specified</string>
+    <string name="textfield_label">Location</string>
+    <string name="button_label">Show weather</string>
 </resources>
