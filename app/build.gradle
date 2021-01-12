@@ -17,8 +17,6 @@ android {
         buildConfigField "String", "BASE_URL", property("com.example.weather3.baseWeatherApiUrl")
         buildConfigField "String", "WEATHER_ICON_PREFIX", property("com.example.weather3.weatherIconPrefix")
         buildConfigField "String", "WEATHER_ICON_SCALE", property("com.example.weather3.weatherIconScale")
-        buildConfigField "String", "CELSIUS", property("com.example.weather3.celsiusSymbol")
-        buildConfigField "String", "PERCENT", property("com.example.weather3.percentSymbol")
     }
 
     buildTypes {
