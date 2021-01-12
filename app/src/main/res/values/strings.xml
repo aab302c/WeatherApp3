@@ -4,4 +4,7 @@
     <string name="empty_city_field">Location is not specified</string>
     <string name="textfield_label">Location</string>
     <string name="button_label">Show weather</string>
+    <string name="temp_with_celsius">%d \u2103</string>
+    <string name="humidity_string">%d %s</string>
+    <string name="error">Something went wrong. It is possible you have specified an incorrect city name</string>
 </resources>

@@ -5,4 +5,7 @@
     <string name="empty_city_field">Населенный пункт не указан</string>
     <string name="textfield_label">Населенный пункт</string>
     <string name="button_label">Показать погоду</string>
+    <string name="temp_with_celsius">%d \u2103</string>
+    <string name="humidity_string">%d %s</string>
+    <string name="error">Произошла ошибка.\nВозможно Вы ошиблись в названии города</string>
 </resources>

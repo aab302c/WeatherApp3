@@ -1,5 +1,7 @@
 package com.example.weather3.entity;
 
+import android.util.Log;
+
 import com.example.weather3.model.weather.WeatherObject;
 
 import javax.inject.Inject;

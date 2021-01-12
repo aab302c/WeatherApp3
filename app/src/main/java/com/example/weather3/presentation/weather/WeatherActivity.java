@@ -1,6 +1,7 @@
 package com.example.weather3.presentation.weather;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -37,6 +38,10 @@ public class WeatherActivity extends AppCompatActivity {
     TextView sunriseTv;
     @BindView(R.id.sunset)
     TextView sunsetTv;
+    @BindView(R.id.errorView)
+    View errorView;
+    @BindView(R.id.weather)
+    View weatherView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -51,14 +56,21 @@ public class WeatherActivity extends AppCompatActivity {
 
         disposable.add(
                 viewModel.getWeather(cityName)
-                        .subscribe(this::displayWeather)
+                        .subscribe(this::displayWeather,
+                                this::displayError)
         );
     }
 
+    private void displayError(Throwable throwable) {
+        weatherView.setVisibility(View.GONE);
+        errorView.setVisibility(View.VISIBLE);
+    }
 
     private void displayWeather(WeatherDisplay weather) {
-        tempTv.setText(weather.getTemp() + BuildConfig.CELSIUS);
-        humidityTv.setText(weather.getHumidity() + BuildConfig.PERCENT);
+        weatherView.setVisibility(View.VISIBLE);
+        errorView.setVisibility(View.GONE);
+        tempTv.setText(getString(R.string.temp_with_celsius, weather.getTemp()));
+        humidityTv.setText(getString(R.string.humidity_string, weather.getHumidity(), "%"));
         setTitle(weather.getName() + ", " + weather.getCountry());
         ImageLoader.load(weatherIcon, BuildConfig.WEATHER_ICON_PREFIX
                                                         + weather.getImageUrl()
